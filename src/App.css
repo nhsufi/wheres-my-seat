@@ -16,6 +16,14 @@
   font-display: swap;
 }
 
+@font-face {
+  font-family: 'Playball';
+  src: url('./assets/fonts/Playball/Playball-Regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
 :root {
   --bg: #f5f4ee;
   --text: #372056;
@@ -28,9 +36,10 @@
 
   --font-heading: 'EB Garamond', Georgia, 'Times New Roman', serif;
   --font-body: 'EB Garamond', Georgia, 'Times New Roman', serif;
+  --font-display: 'Playball', 'EB Garamond', Georgia, cursive;
 
   font-family: var(--font-body);
-  font-weight: 500;
+  font-weight: 600;
   color: var(--text);
   background-color: var(--bg);
 }
@@ -66,10 +75,11 @@ body {
 }
 
 .app-title {
-  font-family: var(--font-heading);
+  font-family: var(--font-display);
   font-size: clamp(2.75rem, 9vw, 4.25rem);
-  font-weight: 700;
-  letter-spacing: 0.005em;
+  font-weight: 400;
+  font-style: normal;
+  letter-spacing: 0;
   margin: 0;
 }
 
