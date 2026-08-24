@@ -10,8 +10,8 @@ export const App = () => {
   return (
     <div className="app">
       <header className="app-header">
-        <h1 className="app-title">Find Your Seat</h1>
-        <p className="app-subtitle">Welcome to our wedding celebration</p>
+        <h1 className="app-title">Where's My Seat?</h1>
+        <p className="app-subtitle">Welcome to Samha & Naveed's wedding!</p>
       </header>
 
       <main className="app-main">

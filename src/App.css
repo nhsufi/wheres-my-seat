@@ -1,3 +1,21 @@
+@font-face {
+  font-family: 'EB Garamond';
+  src: url('./assets/fonts/EB_Garamond/EBGaramond-VariableFont_wght.woff2')
+    format('woff2-variations');
+  font-weight: 400 800;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'EB Garamond';
+  src: url('./assets/fonts/EB_Garamond/EBGaramond-Italic-VariableFont_wght.woff2')
+    format('woff2-variations');
+  font-weight: 400 800;
+  font-style: italic;
+  font-display: swap;
+}
+
 :root {
   --bg: #f5f4ee;
   --text: #372056;
@@ -8,7 +26,11 @@
   --shadow: 0 8px 30px rgba(55, 32, 86, 0.08);
   --radius: 16px;
 
-  font-family: 'Georgia', 'Times New Roman', serif;
+  --font-heading: 'EB Garamond', Georgia, 'Times New Roman', serif;
+  --font-body: 'EB Garamond', Georgia, 'Times New Roman', serif;
+
+  font-family: var(--font-body);
+  font-weight: 500;
   color: var(--text);
   background-color: var(--bg);
 }
@@ -44,14 +66,16 @@ body {
 }
 
 .app-title {
-  font-size: clamp(2rem, 6vw, 3rem);
-  font-weight: 400;
-  letter-spacing: 0.02em;
+  font-family: var(--font-heading);
+  font-size: clamp(2.75rem, 9vw, 4.25rem);
+  font-weight: 700;
+  letter-spacing: 0.005em;
   margin: 0;
 }
 
 .app-subtitle {
   margin: 0.5rem 0 0;
+  font-size: clamp(1rem, 4vw, 1.5rem);
   font-style: italic;
   color: var(--accent);
 }
@@ -222,9 +246,11 @@ body {
 }
 
 .table-heading {
+  font-family: var(--font-heading);
   margin: 0 0 0.75rem;
   font-size: 1.25rem;
-  font-weight: 600;
+  font-weight: 700;
+  font-style: italic;
   color: var(--accent);
   border-bottom: 1px solid var(--accent-soft-tint);
   padding-bottom: 0.5rem;
