@@ -27,7 +27,7 @@ const searchKeys = (guest: Guest): string[] => {
 export const displayName = (guest: Guest): string =>
   `${guest.firstName} ${guest.lastName}`
 
-const MAX_SUGGESTIONS = 8
+const MAX_SUGGESTIONS = 4
 
 /**
  * Return guests whose name (or alias) contains the query, ranked so that

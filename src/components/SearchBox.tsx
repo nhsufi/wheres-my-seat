@@ -66,7 +66,7 @@ export const SearchBox = ({ onShowAllTables }: SearchBoxProps) => {
 
   return (
     <div className="search-view">
-      <p className="lead">Start typing your name to find your table.</p>
+      <p className="lead">Start typing your name to find your table</p>
 
       <div className="search-box" ref={containerRef}>
         <input
