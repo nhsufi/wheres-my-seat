@@ -1,0 +1,10 @@
+[
+  { "firstName": "Robert", "lastName": "Smith", "aliases": ["Bob", "Bobby"], "table": 1 },
+  { "firstName": "Alexandra", "lastName": "Jones", "aliases": ["Alex"], "table": 1 },
+  { "firstName": "Maria", "lastName": "Garcia", "aliases": [], "table": 2 },
+  { "firstName": "James", "lastName": "Williams", "aliases": ["Jim", "Jimmy"], "table": 2 },
+  { "firstName": "Priya", "lastName": "Patel", "aliases": [], "table": 3 },
+  { "firstName": "Mohammed", "lastName": "Khan", "aliases": ["Mo"], "table": 3 },
+  { "firstName": "Sophie", "lastName": "Nguyen", "aliases": [], "table": 4 },
+  { "firstName": "Daniel", "lastName": "O'Brien", "aliases": ["Dan"], "table": 4 }
+]
