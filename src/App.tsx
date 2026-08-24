@@ -1,10 +1,10 @@
 import { useState } from 'react'
-import SearchBox from './components/SearchBox'
-import AllTables from './components/AllTables'
+import { SearchBox } from './components/SearchBox'
+import { AllTables } from './components/AllTables'
 
 type View = 'search' | 'tables'
 
-export default function App() {
+export const App = () => {
   const [view, setView] = useState<View>('search')
 
   return (

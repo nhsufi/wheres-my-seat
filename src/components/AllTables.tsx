@@ -10,7 +10,7 @@ interface TableGroup {
   guests: Guest[]
 }
 
-export default function AllTables({ onBack }: AllTablesProps) {
+export const AllTables = ({ onBack }: AllTablesProps) => {
   const groups = useMemo<TableGroup[]>(() => {
     const byTable = new Map<number, Guest[]>()
     for (const guest of guests) {

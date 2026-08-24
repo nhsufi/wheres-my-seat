@@ -6,7 +6,7 @@ interface SearchBoxProps {
   onShowAllTables: () => void
 }
 
-export default function SearchBox({ onShowAllTables }: SearchBoxProps) {
+export const SearchBox = ({ onShowAllTables }: SearchBoxProps) => {
   const [query, setQuery] = useState('')
   const [selected, setSelected] = useState<Guest | null>(null)
   const [open, setOpen] = useState(false)
@@ -16,7 +16,7 @@ export default function SearchBox({ onShowAllTables }: SearchBoxProps) {
   const suggestions = useMemo(() => searchGuests(query, guests), [query])
 
   useEffect(() => {
-    function onClickOutside(e: MouseEvent) {
+    const onClickOutside = (e: MouseEvent) => {
       if (containerRef.current && !containerRef.current.contains(e.target as Node)) {
         setOpen(false)
       }
@@ -25,21 +25,21 @@ export default function SearchBox({ onShowAllTables }: SearchBoxProps) {
     return () => document.removeEventListener('mousedown', onClickOutside)
   }, [])
 
-  function choose(guest: Guest) {
+  const choose = (guest: Guest) => {
     setSelected(guest)
     setQuery(displayName(guest))
     setOpen(false)
     setActiveIndex(-1)
   }
 
-  function onChange(value: string) {
+  const onChange = (value: string) => {
     setQuery(value)
     setSelected(null)
     setOpen(true)
     setActiveIndex(-1)
   }
 
-  function onKeyDown(e: React.KeyboardEvent<HTMLInputElement>) {
+  const onKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {
     if (!open && (e.key === 'ArrowDown' || e.key === 'ArrowUp')) {
       setOpen(true)
       return
@@ -51,9 +51,10 @@ export default function SearchBox({ onShowAllTables }: SearchBoxProps) {
       e.preventDefault()
       setActiveIndex((i) => Math.max(i - 1, 0))
     } else if (e.key === 'Enter') {
-      if (open && activeIndex >= 0 && activeIndex < suggestions.length) {
+      if (open && suggestions.length > 0) {
         e.preventDefault()
-        choose(suggestions[activeIndex])
+        const index = activeIndex >= 0 ? activeIndex : 0
+        choose(suggestions[index])
       }
     } else if (e.key === 'Escape') {
       setOpen(false)
