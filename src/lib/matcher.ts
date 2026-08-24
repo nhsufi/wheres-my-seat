@@ -2,13 +2,15 @@ import type { Guest } from '../data/guests'
 
 /**
  * Normalize a string for comparison: lowercase, trimmed, whitespace collapsed,
- * and diacritics removed (so "José" matches "jose").
+ * diacritics removed (so "José" matches "jose"), and apostrophes/hyphens/periods
+ * dropped (so "obrien" matches "O'Brien").
  */
 export const normalize = (s: string): string =>
   s
     .normalize('NFD')
     .replace(/\p{Diacritic}/gu, '')
     .toLowerCase()
+    .replace(/['\u2019.-]/g, '')
     .trim()
     .replace(/\s+/g, ' ')
 
@@ -20,6 +22,18 @@ const searchKeys = (guest: Guest): string[] => {
   for (const alias of guest.aliases) {
     const a = normalize(alias)
     if (a) keys.push(`${a} ${last}`, a)
+  }
+  return keys
+}
+
+/** Precomputed keys so we don't re-normalize every guest on each keystroke. */
+const guestKeys = new WeakMap<Guest, string[]>()
+
+const keysFor = (guest: Guest): string[] => {
+  let keys = guestKeys.get(guest)
+  if (!keys) {
+    keys = searchKeys(guest)
+    guestKeys.set(guest, keys)
   }
   return keys
 }
@@ -39,7 +53,7 @@ export const searchGuests = (query: string, list: Guest[]): Guest[] => {
 
   const scored: { guest: Guest; rank: number }[] = []
   for (const guest of list) {
-    const keys = searchKeys(guest)
+    const keys = keysFor(guest)
     let rank = Infinity
     for (const key of keys) {
       if (key === q) rank = Math.min(rank, 0)

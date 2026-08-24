@@ -22,9 +22,7 @@ export const AllTables = ({ onBack }: AllTablesProps) => {
       .sort((a, b) => a[0] - b[0])
       .map(([table, list]) => ({
         table,
-        guests: [...list].sort((a, b) =>
-          a.lastName.localeCompare(b.lastName),
-        ),
+        guests: [...list].sort((a, b) => a.lastName.localeCompare(b.lastName)),
       }))
   }, [])
 
@@ -39,8 +37,8 @@ export const AllTables = ({ onBack }: AllTablesProps) => {
           <section key={group.table} className="table-card">
             <h2 className="table-heading">Table {group.table}</h2>
             <ul className="table-guests">
-              {group.guests.map((guest) => (
-                <li key={`${guest.firstName}-${guest.lastName}`}>
+              {group.guests.map((guest, i) => (
+                <li key={`${guest.firstName}-${guest.lastName}-${i}`}>
                   {guest.firstName} {guest.lastName}
                 </li>
               ))}

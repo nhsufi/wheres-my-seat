@@ -12,12 +12,16 @@ export const SearchBox = ({ onShowAllTables }: SearchBoxProps) => {
   const [open, setOpen] = useState(false)
   const [activeIndex, setActiveIndex] = useState(-1)
   const containerRef = useRef<HTMLDivElement>(null)
+  const inputRef = useRef<HTMLInputElement>(null)
 
   const suggestions = useMemo(() => searchGuests(query, guests), [query])
 
   useEffect(() => {
     const onClickOutside = (e: MouseEvent) => {
-      if (containerRef.current && !containerRef.current.contains(e.target as Node)) {
+      if (
+        containerRef.current &&
+        !containerRef.current.contains(e.target as Node)
+      ) {
         setOpen(false)
       }
     }
@@ -30,6 +34,8 @@ export const SearchBox = ({ onShowAllTables }: SearchBoxProps) => {
     setQuery(displayName(guest))
     setOpen(false)
     setActiveIndex(-1)
+    // Dismiss the on-screen keyboard on mobile once a guest is selected.
+    inputRef.current?.blur()
   }
 
   const onChange = (value: string) => {
@@ -70,16 +76,26 @@ export const SearchBox = ({ onShowAllTables }: SearchBoxProps) => {
 
       <div className="search-box" ref={containerRef}>
         <input
+          ref={inputRef}
           type="text"
           className="search-input"
           placeholder="Your name..."
           value={query}
           onChange={(e) => onChange(e.target.value)}
-          onFocus={() => query && setOpen(true)}
+          onFocus={() => {
+            if (query && !(selected && query === displayName(selected))) {
+              setOpen(true)
+            }
+          }}
           onKeyDown={onKeyDown}
           role="combobox"
           aria-expanded={showDropdown}
           aria-controls="guest-listbox"
+          aria-activedescendant={
+            showDropdown && activeIndex >= 0
+              ? `guest-option-${activeIndex}`
+              : undefined
+          }
           aria-autocomplete="list"
           autoComplete="off"
           autoCorrect="off"
@@ -92,6 +108,7 @@ export const SearchBox = ({ onShowAllTables }: SearchBoxProps) => {
             {suggestions.map((guest, i) => (
               <li
                 key={`${guest.firstName}-${guest.lastName}-${guest.table}`}
+                id={`guest-option-${i}`}
                 role="option"
                 aria-selected={i === activeIndex}
                 className={`suggestion${i === activeIndex ? ' active' : ''}`}
@@ -118,8 +135,8 @@ export const SearchBox = ({ onShowAllTables }: SearchBoxProps) => {
 
       {query && !selected && suggestions.length === 0 && (
         <p className="no-match">
-          We couldn't find that name. Try a different spelling, or check the full
-          list below.
+          We couldn't find that name. Try a different spelling, or check the
+          full list below.
         </p>
       )}
 

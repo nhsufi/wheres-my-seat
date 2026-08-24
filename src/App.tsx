@@ -3,6 +3,7 @@ import { SearchBox } from './components/SearchBox'
 import { AllTables } from './components/AllTables'
 import { QrCodeView } from './components/QrCodeView'
 import { QrCodeButton } from './components/QrCodeButton'
+import { WeddingWebsiteButton } from './components/WeddingWebsiteButton'
 
 type View = 'search' | 'tables' | 'qr'
 
@@ -24,7 +25,12 @@ export const App = () => {
         {view === 'qr' && <QrCodeView onBack={() => setView('search')} />}
       </main>
 
-      {view === 'search' && <QrCodeButton onClick={() => setView('qr')} />}
+      {view === 'search' && (
+        <div className="fab-stack">
+          <WeddingWebsiteButton />
+          <QrCodeButton onClick={() => setView('qr')} />
+        </div>
+      )}
     </div>
   )
 }
