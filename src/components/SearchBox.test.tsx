@@ -1,11 +1,38 @@
 import { describe, expect, it, vi } from 'vitest'
 import { render, screen, within } from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
+import type { Guest } from '../data/guests'
 import { SearchBox } from './SearchBox'
 
-// These tests rely on the real guest data (src/data/guests.json), which
-// includes "Robert Smith" (aliases Bob/Bobby, table 1) and
-// "Daniel O'Brien" (table 4), among others.
+// These tests use a fixed fixture guest list (instead of the real guest
+// data in src/data/guests.json) so they stay stable regardless of changes
+// to the actual guest list. The fixture includes "Robert Smith" (aliases
+// Bob/Bobby, table 1) and "Daniel O'Brien" (table 4), among others.
+const { fixtureGuests } = vi.hoisted(() => {
+  const fixtureGuests: Guest[] = [
+    {
+      firstName: 'Robert',
+      lastName: 'Smith',
+      aliases: ['Bob', 'Bobby'],
+      table: 1,
+    },
+    { firstName: 'Alexandra', lastName: 'Jones', aliases: ['Alex'], table: 1 },
+    { firstName: 'Maria', lastName: 'Garcia', aliases: [], table: 2 },
+    {
+      firstName: 'James',
+      lastName: 'Williams',
+      aliases: ['Jim', 'Jimmy'],
+      table: 2,
+    },
+    { firstName: 'Priya', lastName: 'Patel', aliases: [], table: 3 },
+    { firstName: 'Mohammed', lastName: 'Khan', aliases: ['Mo'], table: 3 },
+    { firstName: 'Sophie', lastName: 'Nguyen', aliases: [], table: 4 },
+    { firstName: 'Daniel', lastName: "O'Brien", aliases: ['Dan'], table: 4 },
+  ]
+  return { fixtureGuests }
+})
+
+vi.mock('../data/guests', () => ({ guests: fixtureGuests }))
 
 const renderSearchBox = () => {
   const onShowAllTables = vi.fn()
