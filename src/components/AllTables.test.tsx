@@ -16,6 +16,7 @@ const { fixtureGuests } = vi.hoisted(() => {
       table: 1,
     },
     { firstName: 'Alexandra', lastName: 'Jones', aliases: ['Alex'], table: 1 },
+    { firstName: 'Zoe', lastName: 'Smith', aliases: [], table: 1 },
     { firstName: 'Maria', lastName: 'Garcia', aliases: [], table: 2 },
     {
       firstName: 'James',
@@ -65,7 +66,7 @@ describe('AllTables', () => {
     }
   })
 
-  it('sorts guests within a table alphabetically by last name', () => {
+  it('sorts guests within a table alphabetically by last name, then first name', () => {
     render(<AllTables onBack={vi.fn()} />)
 
     const heading = screen.getByText('Table 1')
@@ -74,9 +75,13 @@ describe('AllTables', () => {
       .getAllByRole('listitem')
       .map((li) => li.textContent ?? '')
 
-    // Guests at table 1 in the fixture: Robert Smith, Alexandra Jones ->
-    // sorted by last name: Jones, Smith.
-    expect(names).toEqual(['Alexandra Jones', 'Robert Smith'])
+    // Guests at table 1: Alexandra Jones, Robert Smith, Zoe Smith ->
+    // sorted by last name, then first name.
+    expect(names).toEqual([
+      'Alexandra Jones',
+      'Robert Smith',
+      'Zoe Smith',
+    ])
   })
 
   it('calls onBack when the back button is clicked', async () => {

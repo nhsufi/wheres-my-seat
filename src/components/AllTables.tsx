@@ -22,7 +22,11 @@ export const AllTables = ({ onBack }: AllTablesProps) => {
       .sort((a, b) => a[0] - b[0])
       .map(([table, list]) => ({
         table,
-        guests: [...list].sort((a, b) => a.lastName.localeCompare(b.lastName)),
+        guests: [...list].sort(
+          (a, b) =>
+            a.lastName.localeCompare(b.lastName) ||
+            a.firstName.localeCompare(b.firstName),
+        ),
       }))
   }, [])
 

@@ -3,7 +3,7 @@
     "firstName": "Cynthia",
     "lastName": "Wong",
     "aliases": [],
-    "table": 1
+    "table": 6
   },
   {
     "firstName": "Nasimul",
@@ -15,7 +15,7 @@
     "firstName": "Brian",
     "lastName": "Norman",
     "aliases": [],
-    "table": 1
+    "table": 8
   },
   {
     "firstName": "Sonia",
@@ -27,84 +27,86 @@
     "firstName": "Haley",
     "lastName": "Goldin",
     "aliases": [],
-    "table": 1
+    "table": 2
   },
   {
     "firstName": "Shayaan",
     "lastName": "Sufi",
     "aliases": [],
-    "table": 1
+    "table": 5
   },
   {
     "firstName": "Mehdi",
     "lastName": "Rian",
     "aliases": [],
-    "table": 1
+    "table": 6
   },
   {
     "firstName": "Brandon",
     "lastName": "Rahman",
     "aliases": [],
-    "table": 1
+    "table": 5
   },
   {
     "firstName": "Minalé",
     "lastName": "Nouri",
     "aliases": [],
-    "table": 1
+    "table": 6
   },
   {
     "firstName": "Alexa",
     "lastName": "Rahman",
     "aliases": [],
-    "table": 1
+    "table": 5
   },
   {
     "firstName": "Michalis",
     "lastName": "Papdimitriou",
     "aliases": [],
-    "table": 1
+    "table": 3
   },
   {
     "firstName": "Taniya",
     "lastName": "Ahmed",
     "aliases": [],
-    "table": 1
+    "table": 7
   },
   {
     "firstName": "Arian",
     "lastName": "Kandilaki",
     "aliases": [],
-    "table": 1
+    "table": 3
   },
   {
     "firstName": "Sofia",
     "lastName": "Papadimitriou",
     "aliases": [],
-    "table": 1
+    "table": 3
   },
   {
     "firstName": "Parker",
     "lastName": "Hoffman",
     "aliases": [],
-    "table": 1
+    "table": 9
   },
   {
     "firstName": "Sajeed",
     "lastName": "Islam",
     "aliases": [],
-    "table": 1
+    "table": 9
   },
   {
     "firstName": "Sebath",
     "lastName": "Islam",
     "aliases": [],
-    "table": 1
+    "table": 9
   },
   {
     "firstName": "Faisal",
     "lastName": "Alam",
-    "aliases": ["Khawja"],
+    "aliases": [
+      "Khawja"
+    ],
     "table": 1
   },
   {
@@ -117,7 +119,7 @@
     "firstName": "Seenan",
     "lastName": "Alam",
     "aliases": [],
-    "table": 1
+    "table": 4
   },
   {
     "firstName": "Quamrul",
@@ -129,7 +131,7 @@
     "firstName": "Sarah",
     "lastName": "Khokhar",
     "aliases": [],
-    "table": 1
+    "table": 4
   },
   {
     "firstName": "Jie",
@@ -141,223 +143,231 @@
     "firstName": "Samara",
     "lastName": "Alam",
     "aliases": [],
-    "table": 1
+    "table": 4
   },
   {
     "firstName": "Victoria",
     "lastName": "Hasan",
     "aliases": [],
-    "table": 1
+    "table": 2
   },
   {
     "firstName": "Naia",
     "lastName": "Alam",
     "aliases": [],
-    "table": 1
+    "table": 4
   },
   {
     "firstName": "Rafa",
     "lastName": "Alam",
     "aliases": [],
-    "table": 1
+    "table": 7
   },
   {
     "firstName": "Laurie",
     "lastName": "Garner",
     "aliases": [],
-    "table": 1
+    "table": 2
   },
   {
     "firstName": "Najah",
     "lastName": "Alam-Hill",
     "aliases": [],
-    "table": 1
+    "table": 2
   },
   {
     "firstName": "Vivien",
     "lastName": "Hasan",
     "aliases": [],
-    "table": 1
+    "table": 2
   },
   {
     "firstName": "James",
     "lastName": "Hill",
     "aliases": [],
-    "table": 1
+    "table": 2
   },
   {
     "firstName": "Rami",
     "lastName": "Hill",
     "aliases": [],
-    "table": 1
+    "table": 2
   },
   {
     "firstName": "Demi",
     "lastName": "Correia",
     "aliases": [],
-    "table": 1
+    "table": 8
   },
   {
     "firstName": "Zachary",
     "lastName": "Michael",
     "aliases": [],
-    "table": 1
+    "table": 8
   },
   {
     "firstName": "Salah",
     "lastName": "Hill",
     "aliases": [],
-    "table": 1
+    "table": 2
   },
   {
     "firstName": "Brandon",
     "lastName": "Ngai",
-    "aliases": ["Bing"],
-    "table": 1
+    "aliases": [
+      "Bing"
+    ],
+    "table": 6
   },
   {
     "firstName": "Faizah",
     "lastName": "Syeda",
     "aliases": [],
-    "table": 1
+    "table": 6
   },
   {
     "firstName": "Aswat",
     "lastName": "Alam",
     "aliases": [],
-    "table": 1
+    "table": 3
   },
   {
     "firstName": "Adrian",
     "lastName": "Mysliwiec",
     "aliases": [],
-    "table": 1
+    "table": 8
   },
   {
     "firstName": "Nicole",
     "lastName": "Dusome",
     "aliases": [],
-    "table": 1
+    "table": 8
   },
   {
     "firstName": "Michael",
     "lastName": "Nagorski",
     "aliases": [],
-    "table": 1
+    "table": 9
   },
   {
     "firstName": "Susan",
     "lastName": "Shirazee",
     "aliases": [],
-    "table": 1
+    "table": 4
   },
   {
     "firstName": "Aleah",
     "lastName": "Gri",
     "aliases": [],
-    "table": 1
+    "table": 9
   },
   {
     "firstName": "Maria",
     "lastName": "Garcia",
     "aliases": [],
-    "table": 1
+    "table": 9
   },
   {
     "firstName": "Marwan",
     "lastName": "El Khodary",
     "aliases": [],
-    "table": 1
+    "table": 5
   },
   {
     "firstName": "Muhammad",
     "lastName": "Ali",
-    "aliases": ["Mo"],
-    "table": 1
+    "aliases": [
+      "Mo"
+    ],
+    "table": 4
   },
   {
     "firstName": "Baher",
     "lastName": "Mansour",
     "aliases": [],
-    "table": 1
+    "table": 6
   },
   {
     "firstName": "Alison",
     "lastName": "Elliott",
     "aliases": [],
-    "table": 1
+    "table": 4
   },
   {
     "firstName": "Soham",
     "lastName": "Sen",
-    "aliases": ["Sham"],
-    "table": 1
+    "aliases": [
+      "Sham"
+    ],
+    "table": 4
   },
   {
     "firstName": "Kate",
     "lastName": "Maki",
     "aliases": [],
-    "table": 1
+    "table": 4
   },
   {
     "firstName": "Anarghya",
     "lastName": "Pai",
     "aliases": [],
-    "table": 1
+    "table": 5
   },
   {
     "firstName": "Joseph",
     "lastName": "Balawejder",
     "aliases": [],
-    "table": 1
+    "table": 2
   },
   {
     "firstName": "Sriram",
     "lastName": "Madhusudhan",
     "aliases": [],
-    "table": 1
+    "table": 7
   },
   {
     "firstName": "Leticia",
     "lastName": "Teodoro",
     "aliases": [],
-    "table": 1
+    "table": 4
   },
   {
     "firstName": "Thomas",
     "lastName": "Arellano",
     "aliases": [],
-    "table": 1
+    "table": 6
   },
   {
     "firstName": "Marco",
     "lastName": "Russo",
     "aliases": [],
-    "table": 1
+    "table": 5
   },
   {
     "firstName": "Ria",
     "lastName": "Bata",
-    "aliases": ["Maria"],
-    "table": 1
+    "aliases": [
+      "Maria"
+    ],
+    "table": 8
   },
   {
     "firstName": "Hanson",
     "lastName": "Ng",
     "aliases": [],
-    "table": 1
+    "table": 8
   },
   {
     "firstName": "Alexandros",
     "lastName": "Papadimitriou",
     "aliases": [],
-    "table": 1
+    "table": 2
   },
   {
     "firstName": "Katina",
     "lastName": "Papadimitriou",
     "aliases": [],
-    "table": 1
+    "table": 3
   },
   {
     "firstName": "Niaz",
@@ -369,126 +379,128 @@
     "firstName": "Mike",
     "lastName": "Kachinski",
     "aliases": [],
-    "table": 1
+    "table": 8
   },
   {
     "firstName": "Sean",
     "lastName": "Lee",
     "aliases": [],
-    "table": 1
+    "table": 6
   },
   {
     "firstName": "Khalida",
     "lastName": "Ali",
-    "aliases": ["KP"],
+    "aliases": [
+      "KP"
+    ],
     "table": 1
   },
   {
     "firstName": "Inaam",
     "lastName": "Ali",
     "aliases": [],
-    "table": 1
+    "table": 9
   },
   {
     "firstName": "Haroon",
     "lastName": "Ali",
     "aliases": [],
-    "table": 1
+    "table": 9
   },
   {
     "firstName": "Adil",
     "lastName": "Karim",
     "aliases": [],
-    "table": 1
+    "table": 7
   },
   {
     "firstName": "Amanda",
     "lastName": "Karim",
     "aliases": [],
-    "table": 1
+    "table": 7
   },
   {
     "firstName": "Mariam",
     "lastName": "Karim",
     "aliases": [],
-    "table": 1
+    "table": 7
   },
   {
     "firstName": "Talia",
     "lastName": "Watkins",
     "aliases": [],
-    "table": 1
+    "table": 7
   },
   {
     "firstName": "Richard",
     "lastName": "Hill",
     "aliases": [],
-    "table": 1
+    "table": 3
   },
   {
     "firstName": "Carolyn",
     "lastName": "Hill",
     "aliases": [],
-    "table": 1
+    "table": 3
   },
   {
     "firstName": "Jo Eun",
     "lastName": "Kim",
     "aliases": [],
-    "table": 1
+    "table": 7
   },
   {
     "firstName": "Sara",
     "lastName": "Shah",
     "aliases": [],
-    "table": 1
+    "table": 6
   },
   {
     "firstName": "Isabelle",
     "lastName": "Wei",
     "aliases": [],
-    "table": 1
+    "table": 6
   },
   {
     "firstName": "Smita",
     "lastName": "Luthra",
     "aliases": [],
-    "table": 1
+    "table": 3
   },
   {
     "firstName": "Francesca",
     "lastName": "Chua",
     "aliases": [],
-    "table": 1
+    "table": 7
   },
   {
     "firstName": "Dane",
     "lastName": "Nespoli",
     "aliases": [],
-    "table": 1
+    "table": 8
   },
   {
     "firstName": "Jessica",
     "lastName": "Bognar",
     "aliases": [],
-    "table": 1
+    "table": 8
   },
   {
     "firstName": "Erin",
     "lastName": "Toksoy",
     "aliases": [],
-    "table": 1
+    "table": 9
   },
   {
     "firstName": "Lauren",
     "lastName": "Eede",
     "aliases": [],
-    "table": 1
+    "table": 7
   },
   {
     "firstName": "Yade",
     "lastName": "Sine Cosgun",
     "aliases": [],
-    "table": 1
+    "table": 9
   }
 ]
