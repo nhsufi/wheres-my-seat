@@ -104,9 +104,7 @@
   {
     "firstName": "Faisal",
     "lastName": "Alam",
-    "aliases": [
-      "Khawja"
-    ],
+    "aliases": ["Khawja"],
     "table": 1
   },
   {
@@ -214,9 +212,7 @@
   {
     "firstName": "Brandon",
     "lastName": "Ngai",
-    "aliases": [
-      "Bing"
-    ],
+    "aliases": ["Bing"],
     "table": 6
   },
   {
@@ -276,9 +272,7 @@
   {
     "firstName": "Muhammad",
     "lastName": "Ali",
-    "aliases": [
-      "Mo"
-    ],
+    "aliases": ["Mo"],
     "table": 4
   },
   {
@@ -296,9 +290,7 @@
   {
     "firstName": "Soham",
     "lastName": "Sen",
-    "aliases": [
-      "Sham"
-    ],
+    "aliases": ["Sham"],
     "table": 4
   },
   {
@@ -346,9 +338,7 @@
   {
     "firstName": "Ria",
     "lastName": "Bata",
-    "aliases": [
-      "Maria"
-    ],
+    "aliases": ["Maria"],
     "table": 8
   },
   {
@@ -390,9 +380,7 @@
   {
     "firstName": "Khalida",
     "lastName": "Ali",
-    "aliases": [
-      "KP"
-    ],
+    "aliases": ["KP"],
     "table": 1
   },
   {

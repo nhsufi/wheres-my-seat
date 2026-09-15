@@ -77,11 +77,7 @@ describe('AllTables', () => {
 
     // Guests at table 1: Alexandra Jones, Robert Smith, Zoe Smith ->
     // sorted by last name, then first name.
-    expect(names).toEqual([
-      'Alexandra Jones',
-      'Robert Smith',
-      'Zoe Smith',
-    ])
+    expect(names).toEqual(['Alexandra Jones', 'Robert Smith', 'Zoe Smith'])
   })
 
   it('calls onBack when the back button is clicked', async () => {
