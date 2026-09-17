@@ -1,1 +1,5 @@
+#!/usr/bin/env sh
+# Auto-format staged files, then fail the commit if the repo still
+# wouldn't pass CI's `npm run format:check`.
 npx lint-staged
+npm run format:check
